@@ -19,10 +19,10 @@ package net.sf.ehcache.constructs.web.filter;
 import java.io.ByteArrayOutputStream;
 import java.util.zip.GZIPOutputStream;
 
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import net.sf.ehcache.constructs.web.GenericResponseWrapper;
 import net.sf.ehcache.constructs.web.ResponseUtil;
@@ -150,7 +150,7 @@ public class GzipFilter extends Filter {
      * Checks if the request uri is an include. These cannot be gzipped.
      */
     private boolean isIncluded(final HttpServletRequest request) {
-        final String uri = (String) request.getAttribute("javax.servlet.include.request_uri");
+        final String uri = (String) request.getAttribute("jakarta.servlet.include.request_uri");
         final boolean includeRequest = !(uri == null);
 
         if (includeRequest && LOG.isDebugEnabled()) {

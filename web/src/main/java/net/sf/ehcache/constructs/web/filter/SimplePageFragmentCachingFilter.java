@@ -18,7 +18,7 @@ package net.sf.ehcache.constructs.web.filter;
 
 import net.sf.ehcache.CacheManager;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * A simple page fragment {@link CachingFilter} suitable for most uses.
@@ -41,7 +41,7 @@ import javax.servlet.http.HttpServletRequest;
  * <p/>
  * A problem can occur with tracking software, where unique ids are inserted into request query strings. Because
  * each request generates a unique key, there will never be a cache hit. For these situations it is better to
- * parse the request parameters and override {@link #calculateKey(javax.servlet.http.HttpServletRequest)} with
+ * parse the request parameters and override {@link #calculateKey(jakarta.servlet.http.HttpServletRequest)} with
  * an implementation that takes account of only the significant ones.
  * <h3>Configuring Caching with ehcache</h3>
  * A cache entry in ehcache.xml should be configured with the name {@link #NAME}.

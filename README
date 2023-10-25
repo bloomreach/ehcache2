@@ -1,3 +1,10 @@
+# THIS IS JAKARTA SPECIFIC MODIFIED VERSION OF EHCACHE 2
+
+This is a temporary bloomreach fork of ehcache2 based on `2.0.4` version of engine. The aim of the
+fork is creating a jakarta compatible version before ehcache3 migration.
+
+It needs Java 11+ for compilation
+
 -	To install ehcache-web-parent, ehcache-web and ehcache-web-system-tests along with running integration-tests w/ jetty6x (default)
 	From root dir
 		mvn clean install

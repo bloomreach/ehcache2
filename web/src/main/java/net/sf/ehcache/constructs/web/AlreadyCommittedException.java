@@ -20,7 +20,7 @@ package net.sf.ehcache.constructs.web;
 
 /**
  * <p/>
- * This exception is thrown if, in particular, the {@link javax.servlet.ServletResponse#isCommitted()}
+ * This exception is thrown if, in particular, the {@link jakarta.servlet.ServletResponse#isCommitted()}
  * method shows the response has been  committed. A commited response has already had its status code and headers written.
  * <p/>
  * One situation that can cause this problem is using jsp:include to include a full, cached page in another

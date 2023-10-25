@@ -5,7 +5,7 @@
   <parent>
     <groupId>net.sf.ehcache</groupId>
     <artifactId>ehcache-web-parent</artifactId>
-    <version>2.0.4</version>
+    <version>2.0.4-h1</version>
   </parent>
   <name>Ehcache Web Filters</name>
   <artifactId>ehcache-web</artifactId>
@@ -19,7 +19,6 @@
     </license>
   </licenses>
 
-
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -28,8 +27,9 @@
     </dependency>
 
     <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>6.0.0</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
@@ -39,42 +39,42 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
+
   <build>
     <plugins>
-
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>1.5</source>
-          <target>1.5</target>
+          <source>11</source>
+          <target>11</target>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>2.3</version>
-        <executions>
-          <execution>
-            <phase>verify</phase>
-            <goals>
-              <goal>checkstyle</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <configLocation>${basedir}/checkstyle/checkstyle.xml</configLocation>
-          <suppressionsLocation>${basedir}/checkstyle/suppressions.xml</suppressionsLocation>
-          <headerLocation>${basedir}/checkstyle/ClassHeader.txt</headerLocation>
-          <enableRSS>false</enableRSS>
-          <linkXRef>true</linkXRef>
-          <enableRulesSummary>false</enableRulesSummary>
-          <consoleOutput>true</consoleOutput>
-          <failsOnError>true</failsOnError>
-          <failOnViolation>true</failOnViolation>
-          <includeTestSourceDirectory>true</includeTestSourceDirectory>
-          <enableRulesSummary>true</enableRulesSummary>
-        </configuration>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-checkstyle-plugin</artifactId>-->
+<!--        <version>2.3</version>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <phase>verify</phase>-->
+<!--            <goals>-->
+<!--              <goal>checkstyle</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--        <configuration>-->
+<!--          <configLocation>${basedir}/checkstyle/checkstyle.xml</configLocation>-->
+<!--          <suppressionsLocation>${basedir}/checkstyle/suppressions.xml</suppressionsLocation>-->
+<!--          <headerLocation>${basedir}/checkstyle/ClassHeader.txt</headerLocation>-->
+<!--          <enableRSS>false</enableRSS>-->
+<!--          <linkXRef>true</linkXRef>-->
+<!--          <enableRulesSummary>false</enableRulesSummary>-->
+<!--          <consoleOutput>true</consoleOutput>-->
+<!--          <failsOnError>true</failsOnError>-->
+<!--          <failOnViolation>true</failOnViolation>-->
+<!--          <includeTestSourceDirectory>true</includeTestSourceDirectory>-->
+<!--          <enableRulesSummary>true</enableRulesSummary>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
@@ -117,17 +117,8 @@
       </roles>
       <timezone>+10</timezone>
       <properties>
-        <contribution>Contributed to the CachingHeaders implementation.
-                </contribution>
+        <contribution>Contributed to the CachingHeaders implementation.</contribution>
       </properties>
     </contributor>
   </contributors>
-
-  <repositories>
-    <repository>
-      <id>sourceforge-snapshots</id>
-      <name>Sourceforge Snapshot Repository</name>
-      <url>http://oss.sonatype.org/content/repositories/sourceforge-snapshots</url>
-    </repository>
-  </repositories>
 </project>

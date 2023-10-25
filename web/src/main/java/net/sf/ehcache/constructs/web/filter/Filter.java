@@ -19,13 +19,13 @@ package net.sf.ehcache.constructs.web.filter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -33,14 +33,14 @@ import java.util.Map;
 
 
 /**
- * A generic {@link javax.servlet.Filter} with most of what we need done.
+ * A generic {@link jakarta.servlet.Filter} with most of what we need done.
  * <p/>
- * Participates in the Template Method pattern with {@link javax.servlet.Filter}.
+ * Participates in the Template Method pattern with {@link jakarta.servlet.Filter}.
  *
  * @author <a href="mailto:gluck@thoughtworks.com">Greg Luck</a>
  * @version $Id: Filter.java 746 2008-08-18 08:08:02Z gregluck $
  */
-public abstract class Filter implements javax.servlet.Filter {
+public abstract class Filter implements jakarta.servlet.Filter {
     /**
      * If a request attribute NO_FILTER is set, then filtering will be skipped
      */
@@ -70,7 +70,7 @@ public abstract class Filter implements javax.servlet.Filter {
 
     /**
      * Performs the filtering.  This method calls template method
-     * {@link #doFilter(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.FilterChain) } which does the filtering.
+     * {@link #doFilter(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain) } which does the filtering.
      * This method takes care of error reporting and handling.
      * Errors are reported at warn level because http tends to produce lots of errors.
      *
@@ -177,7 +177,7 @@ public abstract class Filter implements javax.servlet.Filter {
     /**
      * Initialises the filter.
      * <p/>
-     * Calls template method {@link #doInit(javax.servlet.FilterConfig)} to perform any filter specific initialisation.
+     * Calls template method {@link #doInit(jakarta.servlet.FilterConfig)} to perform any filter specific initialisation.
      */
     public final void init(final FilterConfig filterConfig) throws ServletException {
         try {

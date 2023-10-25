@@ -43,9 +43,9 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.zip.DataFormatException;
 
-import javax.servlet.FilterChain;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import net.sf.ehcache.config.CacheConfiguration;
 import net.sf.ehcache.constructs.web.AlreadyGzippedException;

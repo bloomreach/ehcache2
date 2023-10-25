@@ -41,7 +41,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * PageInfo is a {@link java.io.Serializable} representation of a {@link javax.servlet.http.HttpServletResponse}.
+ * PageInfo is a {@link java.io.Serializable} representation of a {@link jakarta.servlet.http.HttpServletResponse}.
  *
  * @author <a href="mailto:gluck@thoughtworks.com">Greg Luck</a>
  * @version $Id: PageInfoTest.java 796 2008-10-09 02:39:03Z gregluck $

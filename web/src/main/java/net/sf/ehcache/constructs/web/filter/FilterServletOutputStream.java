@@ -16,12 +16,13 @@
 
 package net.sf.ehcache.constructs.web.filter;
 
-import javax.servlet.ServletOutputStream;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.WriteListener;
 import java.io.IOException;
 import java.io.OutputStream;
 
 /**
- * A custom {@link javax.servlet.ServletOutputStream} for use by our filters
+ * A custom {@link jakarta.servlet.ServletOutputStream} for use by our filters
  *
  * @version $Id: FilterServletOutputStream.java 744 2008-08-16 20:10:49Z gregluck $
  * @author <a href="mailto:gluck@thoughtworks.com">Greg Luck</a>
@@ -35,6 +36,16 @@ public class FilterServletOutputStream extends ServletOutputStream {
      */
     public FilterServletOutputStream(final OutputStream stream) {
         this.stream = stream;
+    }
+
+    @Override
+    public boolean isReady() {
+        return false;
+    }
+
+    @Override
+    public void setWriteListener(final WriteListener writeListener) {
+
     }
 
     /**

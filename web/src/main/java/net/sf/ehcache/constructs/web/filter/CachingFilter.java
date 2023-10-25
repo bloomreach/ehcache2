@@ -26,11 +26,11 @@ import java.util.Iterator;
 import java.util.TreeSet;
 import java.util.zip.DataFormatException;
 
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import net.sf.ehcache.CacheException;
 import net.sf.ehcache.CacheManager;
@@ -174,7 +174,7 @@ public abstract class CachingFilter extends Filter {
 
     /**
      * Performs the filtering for a request. This method caches based responses
-     * keyed by {@link #calculateKey(javax.servlet.http.HttpServletRequest)}
+     * keyed by {@link #calculateKey(jakarta.servlet.http.HttpServletRequest)}
      * <p/>
      * By default this method will queue requests requesting the page response
      * for a given key until the first thread in the queue has completed. The
@@ -202,7 +202,7 @@ public abstract class CachingFilter extends Filter {
      *             BlockingCache has a timeout set.
      * @throws Exception
      *             for all other exceptions. They will be caught and logged in
-     *             {@link Filter#doFilter(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)}
+     *             {@link Filter#doFilter(jakarta.servlet.ServletRequest, jakarta.servlet.ServletResponse, jakarta.servlet.FilterChain)}
      */
     protected void doFilter(final HttpServletRequest request,
             final HttpServletResponse response, final FilterChain chain)

@@ -20,7 +20,7 @@ import net.sf.ehcache.CacheManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * A simple page {@link CachingFilter} suitable for most uses.
@@ -43,7 +43,7 @@ import javax.servlet.http.HttpServletRequest;
  * <p/>
  * A problem can occur with tracking software such as Google AdWords, where unique ids are inserted into request query strings. Because
  * each request generates a unique key, there will never be a cache hit. For these situations it is better to
- *  override {@link #calculateKey(javax.servlet.http.HttpServletRequest)} with
+ *  override {@link #calculateKey(jakarta.servlet.http.HttpServletRequest)} with
  * an implementation that takes account of only the significant parameters.
  *
  * <h3>Configuring the cacheName</h3>
@@ -146,7 +146,7 @@ public class SimplePageCachingFilter extends CachingFilter {
      * <p/>
      * A problem can occur with tracking software, where unique ids are inserted into request query strings. Because
      * each request generates a unique key, there will never be a cache hit. For these situations it is better to
-     * parse the request parameters and override {@link #calculateKey(javax.servlet.http.HttpServletRequest)} with
+     * parse the request parameters and override {@link #calculateKey(jakarta.servlet.http.HttpServletRequest)} with
      * an implementation that takes account of only the significant ones.
      * <p/>
      * The key should be unique.

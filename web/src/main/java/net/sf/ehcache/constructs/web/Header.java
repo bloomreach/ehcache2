@@ -35,15 +35,15 @@ public class Header<T extends Serializable> implements Serializable {
      */
     public enum Type {
         /**
-         * A String Header. {@link javax.servlet.http.HttpServletResponse#setHeader(String, String)}
+         * A String Header. {@link jakarta.servlet.http.HttpServletResponse#setHeader(String, String)}
          */
         STRING(String.class),
         /**
-         * A date Header. {@link javax.servlet.http.HttpServletResponse#setDateHeader(String, long)}
+         * A date Header. {@link jakarta.servlet.http.HttpServletResponse#setDateHeader(String, long)}
          */
         DATE(Long.class),
         /**
-         * A int Header. {@link javax.servlet.http.HttpServletResponse#setIntHeader(String, int)}
+         * A int Header. {@link jakarta.servlet.http.HttpServletResponse#setIntHeader(String, int)}
          */
         INT(Integer.class);
         

@@ -20,16 +20,16 @@ import net.sf.ehcache.CacheException;
 
 /**
  *
- * The {@link javax.servlet.http.HttpServletResponse#setHeader(String, String)} method
+ * The {@link jakarta.servlet.http.HttpServletResponse#setHeader(String, String)} method
  * sets a response header with the given name and value.
  * <p/>
  * If the header had already been set, the new value overwrites the previous one.
  * The containsHeader method can be  used to test for the presence of a header before setting its  value.
  * <p/>
- * In some cases, the {@link javax.servlet.http.HttpServletResponse#setHeader(String, String)} is ignored.
+ * In some cases, the {@link jakarta.servlet.http.HttpServletResponse#setHeader(String, String)} is ignored.
  * <ol>
- * <li>The {@link javax.servlet.ServletResponse#isCommitted()}.
- * <li>The {@link javax.servlet.RequestDispatcher#include(javax.servlet.ServletRequest, javax.servlet.ServletResponse)}
+ * <li>The {@link jakarta.servlet.ServletResponse#isCommitted()}.
+ * <li>The {@link jakarta.servlet.RequestDispatcher#include(jakarta.servlet.ServletRequest, jakarta.servlet.ServletResponse)}
  * method was used to call the resource.
  * </ol>
  * Ehcache-constructs may set the "Accept-Encoding" header to "gzip". If the response is committed before

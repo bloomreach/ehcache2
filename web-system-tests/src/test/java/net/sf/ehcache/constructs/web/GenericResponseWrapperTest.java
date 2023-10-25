@@ -22,7 +22,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.OutputStream;
 import java.io.Serializable;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -16,7 +16,7 @@
 
 package net.sf.ehcache.constructs.web;
 
-import javax.servlet.http.Cookie;
+import jakarta.servlet.http.Cookie;
 import java.io.Serializable;
 
 /**
