@@ -46,14 +46,8 @@
         <repository>
             <name>Hippo Maven 2 Enterprise Repository</name>
             <id>hippo-maven2-enterprise</id>
-            <url>https://maven.bloomreach.com/repository/enterprise-releases/</url>
+            <url>https://maven.bloomreach.com/repository/releases/</url>
             <uniqueVersion>false</uniqueVersion>
         </repository>
-        <snapshotRepository>
-            <name>Hippo Maven 2 Enterprise Snapshots</name>
-            <id>hippo-maven2-enterprise-snapshots</id>
-            <url>https://maven.bloomreach.com/repository/enterprise-snapshots/</url>
-            <uniqueVersion>false</uniqueVersion>
-        </snapshotRepository>
     </distributionManagement>
 </project>
